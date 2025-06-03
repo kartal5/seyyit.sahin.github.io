@@ -7,14 +7,6 @@
     --mainBorderColor-light: rgb(218, 218, 218);
     --mainBgColor-light: rgb(249, 250, 251);
 
-    --mainTextColor-dark: #fff;
-    --secondaryTextColor-dark: #adb0b1;
-    --mainLinkColor-dark: rgb(30, 190, 214);
-    --mainBorderColor-dark: #2b3031;
-    --mainBgColor-dark: #131415;
-
-    /* "light" to set current theme to light by default */
-    /* "dark" to set current theme to light by default */
     --mainTextColor: var(--mainTextColor-dark);
     --secondaryTextColor: var(--secondaryTextColor-dark);
     --mainLinkColor: var(--mainLinkColor-dark);
@@ -22,13 +14,12 @@
     --mainBgColor: var(--mainBgColor-dark);
 }
 
-
-[data-theme="dark"]{
-    --mainTextColor:#fff;
-    --secondaryTextColor:#adb0b1;
-    --mainLinkColor:rgb(30, 190,214);
-    --mainBorderColor:#2b3031;
-    --mainBgColor:#131415;
+[data-theme="dark"] {
+    --mainTextColor: #fff;
+    --secondaryTextColor: #adb0b1;
+    --mainLinkColor: rgb(30, 190,214);
+    --mainBorderColor: #2b3031;
+    --mainBgColor: #131415;
 }
 
 
