@@ -136,5 +136,20 @@
 
 </body>
     <script src="js/theme-switcher.js"></script>
+
+    
+    <script>
+    document.querySelectorAll('.card--project-clickable').forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Make entire project card clickable
+            if (!e.target.closest('a')) {
+                const link = card.querySelector('a');
+                if (link && link.href) {
+                    window.location = link.href;
+                }
+            }
+        });
+    });
+    </script>
 </html>
 
