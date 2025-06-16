@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="da" data-lang="da">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Seyyit Sahin</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./styles/main.css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title data-i18n="title">Seyyit Sahin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/theme-switcher.css">
+
 </head>
 <body>
 
     <div id="container--main">
 
+        <!-- ================= HERO ================= -->
         <section id="wrapper--hero" class="section--page">
-            <img id="profile-pic" src="./assets/images/profile_pic.jfif"/>
+            <img id="profile-pic" src="./assets/images/profile_pic.jfif" alt="profile" />
 
             <div>
-                <h1 id="user-name">Seyyit Sahin</h1>
-                <p id="bio">Datamatiker, Softwareudvikler & Tech Entusiast med baggrund i web- og softwareudvikling fra <a href="https://www.ucl.dk" target="_blank">UCL Erhvervsakademi og Professionshøjskole</a>.</p>
+                <h1 id="user-name" data-i18n="name">Seyyit Sahin</h1>
+                <p id="bio" data-i18n="bio">Datamatiker, Softwareudvikler & Tech Entusiast med baggrund i web- og softwareudvikling fra <a href="https://www.ucl.dk" target="_blank">UCL Erhvervsakademi og Professionshøjskole</a>.</p>
                 <p id="email">👉 seyyit.sahin@outlook.com</p>
             </div>
         </section>
 
+        <!-- ================= SOCIAL LINKS ================= -->
         <section class="section--page">
             <div id="socials--list">
-                <a href="./assets/resume.pdf" target="_blank">Download CV</a>
+                <a href="./assets/resume.pdf" target="_blank" data-i18n="cv.download">Download CV</a>
                 <a href="https://www.linkedin.com/in/seyyit-sahin/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/kartal5" target="_blank">GitHub</a>
             </div>
         </section>
 
+        <!-- ================= SKILLS ================= -->
         <section class="section--page">
-            <h2>Kompetencer og Kvalifikationer</h2>
+            <h2 data-i18n="section.skills">Kompetencer og Kvalifikationer</h2>
             <ul id="qualifications--list">
-                <li>✔️ Hurtig og løsningsorienteret tilgang</li>
-                <li>✔️ Erfaring med softwareudviklings livscyklus fra idé til implementering</li>
-                <li>✔️ Visuelt orienteret inden for UI/UX med design der skiller sig ud</li>
-                <li>✔️ Evnen til at omsætte komplekse krav til intuitive løsninger</li>
-                <li>✔️ Stærk kommunikator og teamspiller</li>
+                <li data-i18n="skills.1">✔️ Hurtig og løsningsorienteret tilgang</li>
+                <li data-i18n="skills.2">✔️ Erfaring med softwareudviklings livscyklus fra idé til implementering</li>
+                <li data-i18n="skills.3">✔️ Visuelt orienteret inden for UI/UX med design der skiller sig ud</li>
+                <li data-i18n="skills.4">✔️ Evnen til at omsætte komplekse krav til intuitive løsninger</li>
+                <li data-i18n="skills.5">✔️ Stærk kommunikator og teamspiller</li>
             </ul>
         </section>
 
+        <!-- ================= PROJECTS ================= -->
         <section class="section--page">
-            <h2>Projekter & Resultater</h2>
+            <h2 data-i18n="section.projects">Projekter & Resultater</h2>
 
             <div class="card--project card--project-clickable">
-                <a href="project2.html"><span>🏆 </span>Moderne Webshop i Next.js</a>
-                <div class="project-link-indicator">→ Se detaljer</div>
+                <a href="project2.html"><span>🏆 </span><span data-i18n="project.1.title">Moderne Webshop i Next.js</span></a>
+                <div class="project-link-indicator" data-i18n="project.1.link">→ Se detaljer</div>
             </div>
 
             <div class="card--project card--project-clickable">
-                <a href="project1.html"><span>🏆 </span>Datahåndterings Web App – bygget under praktik hos Cella Test</a>
-                <div class="project-link-indicator">→ Se detaljer</div>
+                <a href="project1.html"><span>🏆 </span><span data-i18n="project.2.title">Datahåndterings Web App – bygget under praktik hos Cella Test</span></a>
+                <div class="project-link-indicator" data-i18n="project.2.link">→ Se detaljer</div>
             </div>
 
             <div class="card--project card--project-clickable">
-                <a href="https://mobilecare.dk/" target="_blank"><span>🏆 </span>Udviklet responsiv og intuitiv frontend-løsning til Mobilecare.dk</a>
-                <div class="project-link-indicator">→ Besøg siden</div>
+                <a href="https://mobilecare.dk/" target="_blank"><span>🏆 </span><span data-i18n="project.3.title">Udviklet responsiv og intuitiv frontend-løsning til Mobilecare.dk</span></a>
+                <div class="project-link-indicator" data-i18n="project.3.link">→ Besøg siden</div>
             </div>
 
         </section>
 
+        <!-- ================= TECH STACK ================= -->
         <section class="section--page">
-            <h2>Tech Stack</h2>
+            <h2 data-i18n="section.techstack">Tech Stack</h2>
 
             <div id="wrapper--techstack__items">
                 <div class="card--techstack"><span>C#, ASP.NET, JavaScript, HTML, CSS</span></div>
@@ -72,15 +80,16 @@
             </div>
         </section>
 
+        <!-- ================= WORK HISTORY ================= -->
         <section class="work-history-wrapper">
-            <h2>Erhvervserfaring</h2>
+            <h2 data-i18n="section.work">Erhvervserfaring</h2>
 
             <div class="line-break"></div>
 
             <div class="card--work-history">
                 <strong>🚧 FULLSTACK UDVIKLER | CELLA TEST (Praktik)</strong>
                 <p>2024</p>
-                <p>Udviklede komplette løsninger fra frontend til backend, fokuseret på høj kodekvalitet og effektivitet.</p>
+                <p data-i18n="work.1.desc">Udviklede komplette løsninger fra frontend til backend, fokuseret på høj kodekvalitet og effektivitet.</p>
             </div>
 
             <div class="line-break"></div>
@@ -88,10 +97,10 @@
             <div class="card--work-history">
                 <strong>🚧 IT Konsulent | Antvorskov Skole (Praktik)</strong>
                 <p>2022 – 2023</p>
-                <p>Bidrog med tekniske løsninger og IT-support til skolens daglige drift.</p>
+                <p data-i18n="work.2.desc">Bidrog med tekniske løsninger og IT-support til skolens daglige drift.</p>
                 <ul>
-                    <li>Digitaliserede arbejdsrutiner</li>
-                    <li>Udviklede værktøjer til håndtering af elevdata</li>
+                    <li data-i18n="work.2.point1">Digitaliserede arbejdsrutiner</li>
+                    <li data-i18n="work.2.point2">Udviklede værktøjer til håndtering af elevdata</li>
                 </ul>
             </div>
 
@@ -100,56 +109,66 @@
             <div class="card--work-history">
                 <strong>🚧 Frontend Udvikler | MobileCare.dk (Praktik)</strong>
                 <p>2020</p>
-                <p>Fokuserede på udvikling af brugervenlige og responsive interfaces.</p>
+                <p data-i18n="work.3.desc">Fokuserede på udvikling af brugervenlige og responsive interfaces.</p>
                 <ul>
-                    <li>Arbejdede tæt med UX-design og performance</li>
+                    <li data-i18n="work.3.point1">Arbejdede tæt med UX-design og performance</li>
                 </ul>
             </div>
 
         </section>
 
+        <!-- ================= EDUCATION ================= -->
         <section class="section--page">
-            <h2>Uddannelse</h2>
+            <h2 data-i18n="section.education">Uddannelse</h2>
 
             <div class="card--project">
-                <span>🎓 Professionsbachelor i Webudvikling | UCL Erhvervsakademi (2023 – 2025)</span>
+                <span data-i18n="edu.1">🎓 Professionsbachelor i Webudvikling | UCL Erhvervsakademi (2023 – 2025)</span>
             </div>
 
             <div class="card--project">
-                <span>🎓 Professionsbachelor i Softwareudvikling | UCL Erhvervsakademi (2018)</span>
+                <span data-i18n="edu.2">🎓 Professionsbachelor i Softwareudvikling | UCL Erhvervsakademi (2018)</span>
             </div>
 
             <div class="card--project">
-                <span>🎓 Datamatiker | UCL Erhvervsakademi (2014 – 2017)</span>
+                <span data-i18n="edu.3">🎓 Datamatiker | UCL Erhvervsakademi (2014 – 2017)</span>
             </div>
 
         </section>
 
-
-
     </div>
 
+    <!-- ================= THEME SWITCHER ================= -->
     <div id="theme-switcher">
         <div class="theme" id="theme-light" data-theme="light"></div>
         <div class="theme" id="theme-dark" data-theme="dark"></div>
     </div>
 
-</body>
-    <script src="js/theme-switcher.js"></script>
+    <!-- ================= LANGUAGE SWITCHER ================= -->
+    <div id="language-switcher">
+        <button data-lang="da" title="Dansk">
+            <img src="./assets/images/flags/dk.svg" alt="Dansk">
+        </button>
+        <button data-lang="en" title="English">
+            <img src="./assets/images/flags/gb.svg" alt="English">
+        </button>
+    </div>
 
-    
-    <script>
-    document.querySelectorAll('.card--project-clickable').forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Make entire project card clickable
-            if (!e.target.closest('a')) {
-                const link = card.querySelector('a');
-                if (link && link.href) {
-                    window.location = link.href;
+    <!-- ================= SCRIPTS ================= -->
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+
+    <!-- Make project cards clickable -->
+    <script defer>
+        document.querySelectorAll('.card--project-clickable').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (!e.target.closest('a')) {
+                    const link = card.querySelector('a');
+                    if (link && link.href) {
+                        window.location = link.href;
+                    }
                 }
-            }
+            });
         });
-    });
     </script>
+</body>
 </html>
-

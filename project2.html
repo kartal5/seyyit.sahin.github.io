@@ -1,59 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="da" data-lang="da">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projekt: Prostore E-commerce Web App</title>
+    <title data-i18n="project2.title">Projekt: Prostore E-commerce Web App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/theme-switcher.css">
+    <style>
+        #language-switcher {
+            position: fixed;
+            right: 1em;
+            bottom: 1em;
+            display: flex;
+            gap: .5rem;
+            z-index: 1000;
+        }
+        #language-switcher button {
+            background: none;
+            border: 1px solid var(--mainBorderColor);
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform .2s;
+        }
+        #language-switcher button:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <div id="container--main">
-        <a href="index.html">&#x2190; Tilbage</a>
-        <h1>Prostore E-commerce Web App</h1>
+        <a href="index.html">&#x2190; <span data-i18n="back">Tilbage</span></a>
+        <h1 data-i18n="project2.heading">Prostore E-commerce Web App</h1>
 
         <ul>
             <li>
                 <a href="https://prostore-dusky-gamma.vercel.app/" target="_blank">
-                    🌐 Live Demo
+                    🌐 <span data-i18n="live.demo">Live Demo</span>
                 </a>
             </li>
             <li>
                 <a href="https://github.com/kartal5/prostore" target="_blank">
-                    💻 Kildekode (GitHub)
+                    💻 <span data-i18n="source.code">Kildekode (GitHub)</span>
                 </a>
             </li>
         </ul>
 
-        <p>
-            Prostore er en moderne, fuldt udstyret e-commerce webapplikation bygget med 
-            <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Prisma</strong>, <strong>ShadCN</strong>  og en 
-            <strong>PostgreSQL</strong> database. Applikationen understøtter Avanceret produktstyring med kategorier, 
-            filtrering, PayPal og Stripe som betalingflow, samt bruger-anmeldelser og 
-            real-time lagerstatus.
-        </p>
+        <p data-i18n="project2.para1">Prostore er en moderne, fuldt udstyret e-commerce webapplikation bygget med Next.js, TypeScript, Prisma...</p>
 
-        <p>Der blev lagt stor vægt på brugeroplevelsen med dynamisk routing, server-side rendering (SSR) og statisk generering (SSG), som sikrer hurtig indlæsning og SEO-resultater.</p>
+        <p data-i18n="project2.para2">Der blev lagt stor vægt på brugeroplevelsen med dynamisk routing, server-side rendering og statisk generering...</p>
 
         <ul>
-            <li>✅ Avanceret produktstyring med kategorier, filtrering og søgning</li>
-            <li>✅ Produktanmeldelser med rating og filtrering</li>
-            <li>✅ SEO-optimeret</li>
-            <li>✅ Autentificering & autorisering med NextAuth.js</li>
-            <li>✅ CI/CD opsætning & deployment på Vercel</li>
+            <li data-i18n="project2.point1">✅ Avanceret produktstyring med kategorier, filtrering og søgning</li>
+            <li data-i18n="project2.point2">✅ Produktanmeldelser med rating og filtrering</li>
+            <li data-i18n="project2.point3">✅ SEO-optimeret</li>
+            <li data-i18n="project2.point4">✅ Autentificering & autorisering med NextAuth.js</li>
+            <li data-i18n="project2.point5">✅ CI/CD opsætning & deployment på Vercel</li>
         </ul>
 
-        <p>
-            Projektet er hostet med Vercel, hvilket sikrer effektiv og sikker deployment, automatisk skalering og kontinuerlig integration/udrulning (CI/CD).
-        </p>
+        <p data-i18n="project2.para3">Projektet er hostet med Vercel, hvilket sikrer effektiv og sikker deployment, automatisk skalering og kontinuerlig integration/udrulning (CI/CD).</p>
     </div>
-    
+
     <div id="theme-switcher">
         <div class="theme" id="theme-light" data-theme="light"></div>
         <div class="theme" id="theme-dark" data-theme="dark"></div>
     </div>
 
-    <script src="js/theme-switcher.js"></script>
+    <div id="language-switcher">
+    <button data-lang="da" title="Dansk">
+        <img src="./assets/images/flags/dk.svg" alt="Dansk">
+    </button>
+    <button data-lang="en" title="English">
+        <img src="./assets/images/flags/gb.svg" alt="English">
+    </button>
+    </div>
+
+    <script src="js/theme-switcher.js" defer></script>
+    <script src="js/i18n.js" defer></script>
 </body>
 </html>
