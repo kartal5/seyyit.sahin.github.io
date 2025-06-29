@@ -23,10 +23,13 @@
   "section.techstack": "Tech Stack",
 
   "section.work": "Erhvervserfaring",
+  "work.1.title": "🚧 FULLSTACK UDVIKLER | CELLA TEST (Praktik)",
   "work.1.desc": "Udviklede komplette løsninger fra frontend til backend, fokuseret på høj kodekvalitet og effektivitet.",
+  "work.2.title": "🚧 IT Konsulent | Antvorskov Skole (Praktik)",
   "work.2.desc": "Bidrog med tekniske løsninger og IT-support til skolens daglige drift.",
   "work.2.point1": "Digitaliserede arbejdsrutiner",
   "work.2.point2": "Udviklede værktøjer til håndtering af elevdata",
+  "work.3.title": "🚧 Frontend Udvikler | MobileCare.dk (Praktik)",
   "work.3.desc": "Fokuserede på udvikling af brugervenlige og responsive interfaces.",
   "work.3.point1": "Arbejdede tæt med UX-design og performance",
 

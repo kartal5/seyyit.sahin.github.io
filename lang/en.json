@@ -23,10 +23,13 @@
   "section.techstack": "Tech Stack",
 
   "section.work": "Work Experience",
+  "work.1.title": "🚧 FULLSTACK DEVELOPER | CELLA TEST (Internship)",
   "work.1.desc": "Developed full-stack solutions focused on high code quality and efficiency.",
   "work.2.desc": "Delivered technical solutions and IT support for daily school operations.",
+  "work.2.title": "🚧 IT Consultant | Antvorskov School (Internship)",
   "work.2.point1": "Digitized workflows",
   "work.2.point2": "Developed tools for handling student data",
+  "work.3.title": "🚧 Frontend Developer | MobileCare.dk (Internship)",
   "work.3.desc": "Focused on building user-friendly and responsive interfaces.",
   "work.3.point1": "Worked closely with UX design and performance",
 
