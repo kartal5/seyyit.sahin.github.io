@@ -7,70 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/theme-switcher.css">
-    <style>
-        #language-switcher {
-            position: fixed;
-            right: 1em;
-            bottom: 1em;
-            display: flex;
-            gap: .5rem;
-            z-index: 1000;
-        }
-        #language-switcher button {
-            background: none;
-            border: 1px solid var(--mainBorderColor);
-            border-radius: 50%;
-            width: 34px;
-            height: 34px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: transform .2s;
-        }
-        #language-switcher button:hover {
-            transform: scale(1.1);
-        }
-    </style>
 </head>
 <body>
-    <div id="container--main">
-        <a href="index.html">&#x2190; <span data-i18n="back">Tilbage</span></a>
-        <h1 data-i18n="project1.heading">E-commerce Web App til Cella Test</h1>
+    <div id="container--main" class="project-page">
+        <a class="back-link" href="index.html">&#x2190; <span data-i18n="back">Tilbage</span></a>
+        
+        <div class="project-hero">
+             <h1 data-i18n="project1.heading">E-commerce Web App til Cella Test</h1>
+             <p class="project-summary" data-i18n="project1.para1">Under mit praktikophold hos Cella Test udviklede jeg en fuld funktionel e-commerce applikation målrettet både B2B og B2C brugere...</p>
+        </div>
 
-        <ul>
-            <li><a href="https://cella-test-bachelor-webshop.web.app" target="_blank">🌐 <span data-i18n="live.demo">Live Demo</span></a></li>
-            <li><a href="https://github.com/kartal5/cella-test-webshop" target="_blank">💻 <span data-i18n="source.code">Kildekode (GitHub)</span></a></li>
-        </ul>
+        <div class="project-links">
+            <a href="https://cella-test-bachelor-webshop.web.app" target="_blank" class="project-btn">🌐 <span data-i18n="live.demo">Live Demo</span></a>
+            <a href="https://github.com/kartal5/cella-test-webshop" target="_blank" class="project-btn">💻 <span data-i18n="source.code">Kildekode (GitHub)</span></a>
+        </div>
 
-        <p data-i18n="project1.para1">Under mit praktikophold hos Cella Test udviklede jeg en fuld funktionel e-commerce applikation målrettet både B2B og B2C brugere...</p>
-        <p data-i18n="project1.para2">Jeg arbejdede i <strong>Vue 3</strong> og <strong>Firebase</strong> som backend med fokus på funktionalitet, skalerbarhed og brugervenlighed...</p>
-
-        <ul>
-            <li data-i18n="project1.point1">✅ Design og udvikling af hele frontend og backend logik</li>
-            <li data-i18n="project1.point2">✅ Admin-panel til produkt- og ordre-håndtering</li>
-            <li data-i18n="project1.point3">✅ Vue Router, Pinia store, Firebase Auth og Firestore integration</li>
-            <li data-i18n="project1.point4">✅ Brugerroller (admin/kunde) med dynamisk visning</li>
-            <li data-i18n="project1.point5">✅ Responsivt layout, Tailwind CSS og komponentbaseret arkitektur</li>
-            <li data-i18n="project1.point6">✅ Implementeret unit- og E2E tests med Vitest og Cypress</li>
-        </ul>
-
-        <p data-i18n="project1.para3">Projektet blev afsluttet med fuld deployment via Firebase Hosting og omfattede SEO-optimerede sider samt fallback 404-pages og lazy loading.</p>
+        <div class="project-details">
+            <div class="project-column">
+                <h3 data-i18n="section.techstack">Tech Stack</h3>
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>Vue 3</span></div>
+                    <div class="card--techstack"><span>Firebase</span></div>
+                    <div class="card--techstack"><span>Pinia</span></div>
+                    <div class="card--techstack"><span>Vue Router</span></div>
+                    <div class="card--techstack"><span>Vitest</span></div>
+                    <div class="card--techstack"><span>Cypress</span></div>
+                    <div class="card--techstack"><span>Tailwind CSS</span></div>
+                </div>
+                 <p class="details-text" data-i18n="project1.para2">Jeg arbejdede i <strong>Vue 3</strong> og <strong>Firebase</strong> som backend med fokus på funktionalitet, skalerbarhed og brugervenlighed...</p>
+                 <p class="details-text" data-i18n="project1.para3">Projektet blev afsluttet med fuld deployment via Firebase Hosting...</p>
+            </div>
+            <div class="project-column">
+                <h3>Key Features</h3>
+                <ul>
+                    <li data-i18n="project1.point1">✅ Design og udvikling af hele frontend og backend logik</li>
+                    <li data-i18n="project1.point2">✅ Admin-panel til produkt- og ordre-håndtering</li>
+                    <li data-i18n="project1.point3">✅ Vue Router, Pinia store, Firebase Auth og Firestore integration</li>
+                    <li data-i18n="project1.point4">✅ Brugerroller (admin/kunde) med dynamisk visning</li>
+                    <li data-i18n="project1.point5">✅ Responsivt layout, Tailwind CSS og komponentbaseret arkitektur</li>
+                    <li data-i18n="project1.point6">✅ Implementeret unit- og E2E tests med Vitest og Cypress</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div id="theme-switcher">
-        <div class="theme" id="theme-light" data-theme="light"></div>
-        <div class="theme" id="theme-dark" data-theme="dark"></div>
+        <div class="theme" id="theme-light" data-theme="light" role="button" aria-label="Switch to light theme" tabindex="0"></div>
+        <div class="theme" id="theme-dark" data-theme="dark" role="button" aria-label="Switch to dark theme" tabindex="0"></div>
     </div>
 
     <div id="language-switcher">
-    <button data-lang="da" title="Dansk">
-        <img src="./assets/images/flags/dk.svg" alt="Dansk">
-    </button>
-    <button data-lang="en" title="English">
-        <img src="./assets/images/flags/gb.svg" alt="English">
-    </button>
+        <button data-lang="da" title="Dansk">
+            <img src="./assets/images/flags/dk.svg" alt="Dansk">
+        </button>
+        <button data-lang="en" title="English">
+            <img src="./assets/images/flags/gb.svg" alt="English">
+        </button>
     </div>
 
     <script src="js/theme-switcher.js" defer></script>
     <script src="js/i18n.js" defer></script>
+    <script src="js/animations.js" defer></script>
 </body>
 </html>

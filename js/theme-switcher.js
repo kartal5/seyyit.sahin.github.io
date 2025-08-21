@@ -1,22 +1,42 @@
-const themes = document.getElementsByClassName("theme");
+const themeButtons = document.getElementsByClassName("theme");
+const body = document.querySelector("body");
 
-Array.from(themes).forEach((theme) => {
+function setActiveTheme(theme) {
+    body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    // Set active class
+    Array.from(themeButtons).forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+}
+
+// Add click listeners
+Array.from(themeButtons).forEach((theme) => {
     theme.addEventListener("click", (e) => {
-        document
-            .querySelector("body")
-            .setAttribute("data-theme", e.target.dataset.theme);
-        localStorage.setItem("theme", e.target.dataset.theme);
+        setActiveTheme(e.currentTarget.dataset.theme);
+    });
+    // Allow keyboard activation
+    theme.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            setActiveTheme(e.currentTarget.dataset.theme);
+        }
     });
 });
 
-function getThemeOnLoad() {
-    const theme = localStorage.getItem("theme");
 
-    if (theme) {
-        document.querySelector("body").setAttribute("data-theme", theme);
+function getThemeOnLoad() {
+    const storedTheme = localStorage.getItem("theme");
+    // Check for user's system preference if no theme is stored
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (storedTheme) {
+        setActiveTheme(storedTheme);
+    } else if (systemPrefersDark) {
+        setActiveTheme("dark");
     } else {
-        // Set dark as default if no theme is stored
-        document.querySelector("body").setAttribute("data-theme", "dark");
+        setActiveTheme("light");
     }
 }
+
 getThemeOnLoad();
