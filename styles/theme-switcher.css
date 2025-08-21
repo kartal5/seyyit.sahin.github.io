@@ -5,25 +5,30 @@
     display: flex;
     gap: 10px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .theme {
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    transition: 0.3s;
-    border: 1px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--mainBorderColor);
 }
 
 .theme:hover {
-    height: 33px;
-    width: 33px;
+    transform: scale(1.15);
 }
 
-#theme-dark {
-    background-color: #000;
+.theme.active {
+    box-shadow: 0 0 10px var(--mainLinkColor);
+    border-color: var(--mainLinkColor);
 }
 
 #theme-light {
     background-color: #fff;
+}
+
+#theme-dark {
+    background-color: #121212;
 }
