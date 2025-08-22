@@ -139,22 +139,26 @@ li{
 
 #socials--list{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    column-gap: 1.5em;
+    justify-content: space-between;
+    column-gap: 1em;
     flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 #socials--list a{
-    font-weight: 500;
+    font-weight: 300;
     color: var(--secondaryTextColor);
-    font-size: 1em;
+    font-size: 0.9em;
     transition: 0.3s;
 }
 
 #socials--list a:hover{
+    font-weight: 100;
     color: var(--mainLinkColor);
+    font-size: 0.9em;
 }
+
 
 #cv-download-btn {
     background-color: var(--mainLinkColor);
