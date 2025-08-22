@@ -330,6 +330,7 @@ li{
     #wrapper--hero{
         flex-direction: column;
         text-align: center;
+        gap: 0em;
     }
     .project-page .project-details {
         grid-template-columns: 1fr;
@@ -343,6 +344,11 @@ li{
     .card--work-history{
         border-left: none;
         padding-left: 0;
+    }
+    
+    #profile-pic{
+        width: 200px;
+        height: 200px;
     }
 }
 
