@@ -356,6 +356,26 @@ li{
     }
 }
 
+@media (max-width: 600px) {
+    .card--project-clickable {
+        /* Add padding to ensure text doesn't touch the edge */
+        padding-right: 1.5em;
+    }
+
+    .project-link-indicator {
+        /* Change from absolute to static positioning */
+        position: static;
+        
+        /* Reset transformations and make it a block element */
+        transform: none;
+        display: block;
+        
+        /* Align text to the right and add a little space */
+        text-align: right;
+        margin-top: 0.25em;
+    }
+}
+
 
 /* ─────────────────────────────────────
    LANGUAGE SWITCHER
@@ -397,3 +417,4 @@ li{
   border-color: var(--mainLinkColor);
   box-shadow: 0 0 8px var(--mainLinkColor);
 }
+
