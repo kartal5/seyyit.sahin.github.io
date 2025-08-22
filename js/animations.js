@@ -19,20 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Make project card clickable
+    // Make project card clickable (Corrected Logic)
     document.querySelectorAll('.card--project-clickable').forEach(card => {
         card.addEventListener('click', function (e) {
-            // Prevents link from firing if another link inside the card is clicked
-            if (e.target.closest('a') !== card.querySelector('a')) {
-                return;
-            }
-            const link = card.querySelector('a');
-            if (link && link.href) {
-                // Handle special keys for opening in new tab
-                if (e.metaKey || e.ctrlKey) {
-                    window.open(link.href, '_blank');
-                } else {
-                    window.location.href = link.href;
+            // This condition checks if you clicked on something that ISN'T a link.
+            // If true, it proceeds to navigate using the card's main link.
+            if (!e.target.closest('a')) {
+                const link = card.querySelector('a');
+                if (link && link.href) {
+                     // Handle special keys for opening in new tab
+                    if (e.metaKey || e.ctrlKey) {
+                        window.open(link.href, '_blank');
+                    } else {
+                        window.location.href = link.href;
+                    }
                 }
             }
         });
