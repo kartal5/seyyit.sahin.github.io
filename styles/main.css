@@ -260,6 +260,85 @@ li{
     padding-left: 0;
 }
 
+
+/* ───────────────────────────────────
+    CTA / LET'S WORK TOGETHER SECTION
+─────────────────────────────────── */
+.section--cta {
+    border-top: 1px solid var(--mainBorderColor);
+    margin-top: 1em;
+}
+
+.cta-wrapper {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.cta-wrapper h2 {
+    margin-bottom: 0.5em;
+}
+
+.cta-description {
+    max-width: 500px;
+    margin: 0 auto 2em auto;
+    font-size: 1.1rem;
+}
+
+.cta-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.8em 1.5em;
+    border: 1px solid var(--mainBorderColor);
+    background-color: var(--cardBgColor);
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--secondaryTextColor);
+    transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+    border-color: var(--mainLinkColor);
+    color: var(--mainLinkColor);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cta-link--primary {
+    background-color: var(--mainLinkColor);
+    border-color: var(--mainLinkColor);
+    color: #fff;
+}
+
+.cta-link--primary:hover {
+    background-color: transparent;
+    color: var(--mainLinkColor);
+}
+
+.cta-link--primary .cta-icon {
+    filter: grayscale(100%) brightness(10);
+}
+
+.cta-link--primary:hover .cta-icon {
+    filter: none;
+}
+
+.cta-icon {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+
+
+
+
 /* ───────────────────────────────────
     PROJECT PAGE STYLES
 ─────────────────────────────────── */
@@ -353,6 +432,17 @@ li{
     #profile-pic{
         width: 200px;
         height: 200px;
+    }
+
+    .cta-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-link {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
     }
 }
 

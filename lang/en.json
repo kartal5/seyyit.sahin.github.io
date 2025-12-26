@@ -38,6 +38,10 @@
   "edu.2": "🎓 Bachelor's in Software Development | UCL University College (2018)",
   "edu.3": "🎓 AP Graduate in Computer Science | UCL University College (2014 – 2017)",
 
+  "section.contact": "Let's work together",
+  "contact.desc": "I'm always interested in exciting projects and new challenges. Feel free to reach out.",
+  "contact.email": "Send an email",
+
   "back": "Back",
   "live.demo": "Live Demo",
   "source.code": "Source Code",
