@@ -317,8 +317,21 @@ li{
     color: #fff;
 }
 
+
+/* ensure readable text for highlighted primary CTA */
+.cta-link--primary span {
+    color: #fff;
+}
+
+
+
 .cta-link--primary:hover {
     background-color: transparent;
+    color: var(--mainLinkColor);
+}
+
+
+.cta-link--primary:hover span {
     color: var(--mainLinkColor);
 }
 
