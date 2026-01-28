@@ -521,3 +521,47 @@ li{
   box-shadow: 0 0 8px var(--mainLinkColor);
 }
 
+/* ─────────────────────────────────────
+   THEME SWITCHER
+───────────────────────────────────── */
+#theme-switcher {
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+#theme-switcher .theme {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--mainBorderColor);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  padding: 0;
+  background: transparent;
+}
+
+#theme-switcher .theme:hover {
+  transform: scale(1.12);
+}
+
+#theme-switcher .theme:focus-visible {
+  outline: 2px solid var(--mainLinkColor);
+  outline-offset: 3px;
+}
+
+#theme-switcher .theme.active {
+  box-shadow: 0 0 10px var(--mainLinkColor);
+  border-color: var(--mainLinkColor);
+}
+
+#theme-light {
+  background-color: #fff;
+}
+
+#theme-dark {
+  background-color: #121212;
+}

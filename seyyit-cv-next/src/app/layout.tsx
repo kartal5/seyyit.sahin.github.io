@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { inter, poppins } from "@/lib/fonts";
 import ScrollReveal from "@/components/ScrollReveal";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+
 
 export const metadata: Metadata = {
   title: "Seyyit Sahin",
@@ -19,6 +22,8 @@ export default function RootLayout({
       >
         {children}
         <ScrollReveal />
+          <ThemeSwitcher />
+          <LanguageSwitcher />
       </body>
     </html>
   );
