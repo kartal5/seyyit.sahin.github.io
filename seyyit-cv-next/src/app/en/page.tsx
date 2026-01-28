@@ -5,7 +5,7 @@ import TechStack from "@/components/cv/TechStack";
 import Projects from "@/components/cv/Projects";
 
 export default function Page() {
-  const c = cvContent.da;
+  const c = cvContent.en;
 
   return (
     <div id="container--main">

@@ -51,7 +51,7 @@ export const cvContent: Record<Locale, CvContent> = {
   da: {
     "meta": { "title": "Seyyit Sahin - CV" },
     "hero": {
-      "name": "Seyyit Sahin",
+      "name": "Seyyit Sahin (EN TEST)",
       "bio": "Datamatiker og Professionsbachelor i Webudvikling. Jeg bygger moderne web løsninger med fokus på performance, brugervenlighed og effektiv codebase-struktur.",
       "email": "seyyit.sahin@outlook.com"
     },
