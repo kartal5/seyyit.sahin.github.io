@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 type Locale = "da" | "en";
 
@@ -10,8 +10,6 @@ function getLocaleFromPath(pathname: string): Locale {
 
 function toLocalePath(pathname: string, target: Locale): string {
   const isEn = pathname === "/en" || pathname.startsWith("/en/");
-
-  // Normalize a bit for safety
   const clean = pathname || "/";
 
   if (target === "en") {
@@ -19,7 +17,6 @@ function toLocalePath(pathname: string, target: Locale): string {
     return clean === "/" ? "/en/" : `/en${clean}`;
   }
 
-  // target === "da"
   if (!isEn) return clean;
   const stripped = clean.replace(/^\/en(?=\/|$)/, "");
   return stripped === "" ? "/" : stripped;
@@ -27,11 +24,11 @@ function toLocalePath(pathname: string, target: Locale): string {
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
-  const router = useRouter();
-
   const current = getLocaleFromPath(pathname);
+  
+  // Hard navigation to reset DOM and animations
   const go = (target: Locale) => {
-    router.push(toLocalePath(pathname, target));
+    window.location.href = toLocalePath(pathname, target);
   };
 
   return (

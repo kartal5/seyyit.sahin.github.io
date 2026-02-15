@@ -18,7 +18,7 @@ export type WorkItem = {
 
 export type CvContent = {
   meta: { title: string };
-  hero: { name: string; bio: string; email: string };
+  hero: { name: string; bioHtml: string; email: string };
   sections: {
     skills: string;
     projects: string;
@@ -50,11 +50,12 @@ export type CvContent = {
 export const cvContent: Record<Locale, CvContent> = {
   da: {
     "meta": { "title": "Seyyit Sahin - CV" },
-    "hero": {
-      "name": "Seyyit Sahin",
-      "bio": "Datamatiker og Professionsbachelor i Webudvikling. Jeg bygger moderne web løsninger med fokus på performance, brugervenlighed og effektiv codebase-struktur.",
-      "email": "seyyit.sahin@outlook.com"
-    },
+  hero: {
+    name: "Seyyit Sahin",
+    bioHtml:
+      "Datamatiker, Softwareudvikler & Tech Entusiast med baggrund i web- og softwareudvikling fra <a href='https://www.ucl.dk' target='_blank'>UCL Erhvervsakademi og Professionshøjskole</a>.",
+    email: "👉 seyyit.sahin@outlook.com",
+  },
     "sections": {
       "skills": "Kvalifikationer",
       "projects": "Projekter",
@@ -146,11 +147,12 @@ export const cvContent: Record<Locale, CvContent> = {
 
   en: {
     "meta": { "title": "Seyyit Sahin - CV" },
-    "hero": {
-      "name": "Seyyit Sahin",
-      "bio": "Computer Science AP graduate and Web Development bachelor. I build modern web solutions with a focus on performance, usability, and maintainable structure.",
-      "email": "seyyit.sahin@outlook.com"
-    },
+  hero: {
+    name: "Seyyit Sahin",
+    bioHtml:
+      "Datamatiker, Software Developer & Tech Enthusiast with a background in web and software development from <a href='https://www.ucl.dk' target='_blank'>UCL Business Academy and University College</a>.",
+    email: "👉 seyyit.sahin@outlook.com",
+  },
     "sections": {
       "skills": "Qualifications",
       "projects": "Projects",

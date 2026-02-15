@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <div id="container--main">
-      <Hero name={c.hero.name} bio={c.hero.bio} email={c.hero.email} />
+      <Hero name={c.hero.name} bioHtml={c.hero.bioHtml} email={c.hero.email} />
 
       <SocialLinks
         resumeLabel={c.socials.resumeLabel}
