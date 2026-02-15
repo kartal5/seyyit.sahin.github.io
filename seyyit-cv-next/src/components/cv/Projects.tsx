@@ -22,13 +22,15 @@ export default function Projects({ title, projects }: Props) {
         <div key={p.slug} className="card--project card--project-clickable">
           {p.external ? (
             <a href={p.href} target="_blank" rel="noreferrer">
-              {p.title}
+              <span>🏆 </span><span>{p.title}</span>
             </a>
           ) : (
-            <Link href={p.href}>{p.title}</Link>
+            <Link href={p.href}>
+              <span>🏆 </span><span>{p.title}</span>
+            </Link>
           )}
 
-          <span className="project-link-indicator">{p.linkLabel}</span>
+          <div className="project-link-indicator">{p.linkLabel}</div>
         </div>
       ))}
     </section>

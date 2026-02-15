@@ -8,11 +8,11 @@ export default function Education({ title, items }: Props) {
     <section className="section--page">
       <h2>{title}</h2>
 
-      <ul>
-        {items.map((x) => (
-          <li key={x}>{x}</li>
-        ))}
-      </ul>
+      {items.map((x) => (
+        <div key={x} className="card--project">
+          <span>{x}</span>
+        </div>
+      ))}
     </section>
   );
 }

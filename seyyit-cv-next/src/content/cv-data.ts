@@ -57,8 +57,8 @@ export const cvContent: Record<Locale, CvContent> = {
     email: "👉 seyyit.sahin@outlook.com",
   },
     "sections": {
-      "skills": "Kvalifikationer",
-      "projects": "Projekter",
+      "skills": "Kompetencer og Kvalifikationer",
+      "projects": "Projekter & Resultater",
       "techstack": "Tech Stack",
       "work": "Erhvervserfaring",
       "education": "Uddannelse",
@@ -73,11 +73,11 @@ export const cvContent: Record<Locale, CvContent> = {
       "githubHref": "https://github.com/kartal5"
     },
     "skills": [
-      "Bygger fullstack web apps i moderne frameworks",
-      "Fokus på god UX, performance og responsivitet",
-      "Skalerbar struktur med fokus på vedligeholdelse",
-      "Erfaring med automatiseret test og kvalitetssikring",
-      "Kan arbejde selvstændigt og levere i samarbejde"
+      "✔️ Hurtig og løsningsorienteret tilgang",
+      "✔️ Erfaring med softwareudviklings livscyklus fra idé til implementering",
+      "✔️ Visuelt orienteret inden for UI/UX med design der skiller sig ud",
+      "✔️ Evnen til at omsætte komplekse krav til intuitive løsninger",
+      "✔️ Stærk kommunikator og teamspiller"
     ],
     "homeProjects": [
       {
@@ -139,7 +139,7 @@ export const cvContent: Record<Locale, CvContent> = {
       "🎓 Datamatiker | Zealand Erhvervsakademi (2016 – 2018)"
     ],
     "contact": {
-      "description": "Hvis du har et projekt eller en rolle, der matcher min profil, så lad os tage en snak.",
+      "description": "Jeg er altid interesseret i spændende projekter og nye udfordringer. Har du et spørgsmål eller en stilling jeg bør høre om?",
       "emailLabel": "Email mig",
       "email": "seyyit.sahin@outlook.com"
     }
@@ -150,7 +150,7 @@ export const cvContent: Record<Locale, CvContent> = {
   hero: {
     name: "Seyyit Sahin",
     bioHtml:
-      "Datamatiker, Software Developer & Tech Enthusiast with a background in web and software development from <a href='https://www.ucl.dk' target='_blank'>UCL Business Academy and University College</a>.",
+      "Computer Scientist, Software Developer & Tech Enthusiast with a background in web and software development from <a href='https://www.ucl.dk' target='_blank'>UCL Business Academy and University College</a>.",
     email: "👉 seyyit.sahin@outlook.com",
   },
     "sections": {
