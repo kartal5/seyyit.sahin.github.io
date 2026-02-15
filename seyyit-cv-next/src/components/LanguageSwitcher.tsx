@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 type Locale = "da" | "en";
 
@@ -24,11 +24,12 @@ function toLocalePath(pathname: string, target: Locale): string {
 
 export default function LanguageSwitcher() {
   const pathname = usePathname();
+  const router = useRouter(); // Bring back the Next.js router
   const current = getLocaleFromPath(pathname);
   
-  // Hard navigation to reset DOM and animations
+  // Soft navigation for smooth, flash-free transitions
   const go = (target: Locale) => {
-    window.location.href = toLocalePath(pathname, target);
+    router.push(toLocalePath(pathname, target));
   };
 
   return (

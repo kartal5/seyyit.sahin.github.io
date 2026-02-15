@@ -19,13 +19,18 @@ export default function ScrollReveal() {
       { threshold: 0.1 }
     );
 
-    const elements = document.querySelectorAll(
-      ".section--page, .card--project, .card--work-history, .card--techstack"
-    );
+    // Wait 100ms for React to mount the new route's DOM before observing
+    const timeoutId = setTimeout(() => {
+      const elements = document.querySelectorAll(
+        ".section--page, .card--project, .card--work-history, .card--techstack"
+      );
+      elements.forEach((el) => observer.observe(el));
+    }, 100);
 
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
   }, [pathname]);
 
   return null;
