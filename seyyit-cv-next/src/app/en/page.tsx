@@ -40,6 +40,8 @@ export default function Page() {
         description={c.contact.description}
         emailLabel={c.contact.emailLabel}
         email={c.contact.email}
+        linkedinHref={c.socials.linkedinHref}
+        githubHref={c.socials.githubHref}
       />
     </div>
   );

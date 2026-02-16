@@ -18,7 +18,7 @@ export default function SocialLinks({
   return (
     <section className="section--page">
       <div id="socials--list">
-        <a id="cv-download-btn" href={resumeHref}>
+        <a href={resumeHref} target="_blank" rel="noreferrer">
           {resumeLabel}
         </a>
 

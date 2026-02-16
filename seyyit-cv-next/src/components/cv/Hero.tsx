@@ -7,6 +7,7 @@ type Props = {
 };
 
 export default function Hero({ name, bioHtml, email }: Props) {
+  const cleanEmail = email.replace("👉", "").trim();
   return (
     <section className="section--page" id="wrapper--hero">
       <Image
@@ -21,7 +22,9 @@ export default function Hero({ name, bioHtml, email }: Props) {
       <div>
         <h1 id="user-name">{name}</h1>
         <p id="bio" dangerouslySetInnerHTML={{ __html: bioHtml }} />
-        <p id="email">{email}</p>
+        <p id="email">
+          👉 <a href={`mailto:${cleanEmail}`}>{cleanEmail}</a>
+        </p>
       </div>
     </section>
   );

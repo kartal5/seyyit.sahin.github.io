@@ -163,23 +163,6 @@ li{
     font-size: 0.9em;
 }
 
-
-#cv-download-btn {
-    background-color: var(--mainLinkColor);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#cv-download-btn:hover {
-    background-color: var(--mainTextColor);
-    color: var(--mainBgColor);
-    transform: translateY(-2px);
-}
-
-
 #qualifications--list{
     list-style: none;
     padding: 0;

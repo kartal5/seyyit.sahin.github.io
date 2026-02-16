@@ -136,7 +136,7 @@ export const cvContent: Record<Locale, CvContent> = {
     "education": [
       "🎓 Professionsbachelor i Webudvikling | UCL Erhvervsakademi (2023 – 2025)",
       "🎓 Professionsbachelor i Softwareudvikling | UCL Erhvervsakademi (2018)",
-      "🎓 Datamatiker | Zealand Erhvervsakademi (2016 – 2018)"
+      "🎓 Datamatiker | UCL Erhvervsakademi (2014 – 2017)"
     ],
     "contact": {
       "description": "Jeg er altid interesseret i spændende projekter og nye udfordringer. Har du et spørgsmål eller en stilling jeg bør høre om?",
@@ -154,8 +154,8 @@ export const cvContent: Record<Locale, CvContent> = {
     email: "👉 seyyit.sahin@outlook.com",
   },
     "sections": {
-      "skills": "Qualifications",
-      "projects": "Projects",
+      "skills": "Skills & Qualifications",
+      "projects": "Projects & Achievements",
       "techstack": "Tech Stack",
       "work": "Work Experience",
       "education": "Education",
@@ -170,11 +170,11 @@ export const cvContent: Record<Locale, CvContent> = {
       "githubHref": "https://github.com/kartal5"
     },
     "skills": [
-      "Build fullstack web apps in modern frameworks",
-      "Focus on UX, performance, and responsive layouts",
-      "Scalable structure with maintainability in mind",
-      "Experience with automated testing and QA",
-      "Work independently and deliver in collaboration"
+      "✔️ Fast and solution-oriented approach",
+      "✔️ Experience with software development lifecycle from concept to delivery",
+      "✔️ UI/UX-minded with design that stands out",
+      "✔️ Ability to translate complex requirements into intuitive solutions",
+      "✔️ Strong communicator and team player"
     ],
     "homeProjects": [
       {
@@ -231,12 +231,12 @@ export const cvContent: Record<Locale, CvContent> = {
       }
     ],
     "education": [
-      "🎓 Professional Bachelor in Web Development | UCL University College (2023 – 2025)",
-      "🎓 Bachelor in Software Development | UCL University College (2018)",
-      "🎓 Computer Science AP | Zealand Academy (2016 – 2018)"
+      "🎓 Bachelor's in Web Development | UCL University College (2023 – 2025)",
+      "🎓 Bachelor's in Software Development | UCL University College (2018)",
+      "🎓 AP Graduate in Computer Science | UCL University College (2014 – 2017)"
     ],
     "contact": {
-      "description": "If you have a project or role that matches my profile, let’s talk.",
+      "description": "I'm always interested in exciting projects and new challenges. Feel free to reach out.",
       "emailLabel": "Email me",
       "email": "seyyit.sahin@outlook.com"
     }

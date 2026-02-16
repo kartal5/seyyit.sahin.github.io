@@ -3,9 +3,7 @@ type Props = {
   description: string;
   emailLabel: string;
   email: string;
-  linkedinLabel: string;
   linkedinHref: string;
-  githubLabel: string;
   githubHref: string;
 };
 
@@ -14,9 +12,7 @@ export default function ContactCTA({
   description,
   emailLabel,
   email,
-  linkedinLabel,
   linkedinHref,
-  githubLabel,
   githubHref,
 }: Props) {
   return (
@@ -32,11 +28,11 @@ export default function ContactCTA({
           </a>
           <a href={linkedinHref} target="_blank" rel="noreferrer" className="cta-link">
             <span className="cta-icon">💼</span>
-            <span>{linkedinLabel}</span>
+            <span>LinkedIn</span>
           </a>
           <a href={githubHref} target="_blank" rel="noreferrer" className="cta-link">
             <span className="cta-icon">💻</span>
-            <span>{githubLabel}</span>
+            <span>GitHub</span>
           </a>
         </div>
       </div>
