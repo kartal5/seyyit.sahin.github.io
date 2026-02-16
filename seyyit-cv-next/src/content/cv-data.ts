@@ -140,7 +140,7 @@ export const cvContent: Record<Locale, CvContent> = {
     ],
     "contact": {
       "description": "Jeg er altid interesseret i spændende projekter og nye udfordringer. Har du et spørgsmål eller en stilling jeg bør høre om?",
-      "emailLabel": "Email mig",
+      "emailLabel": "Send Email",
       "email": "seyyit.sahin@outlook.com"
     }
   },
@@ -237,7 +237,7 @@ export const cvContent: Record<Locale, CvContent> = {
     ],
     "contact": {
       "description": "I'm always interested in exciting projects and new challenges. Feel free to reach out.",
-      "emailLabel": "Email me",
+      "emailLabel": "Send Email",
       "email": "seyyit.sahin@outlook.com"
     }
   }

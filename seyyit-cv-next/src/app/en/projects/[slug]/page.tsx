@@ -21,12 +21,8 @@ export default async function Page({
 
   if (!isProjectSlug(slug)) notFound();
 
+  // Loads the English content
   const p = getProject("en", slug);
-
-  const labels = {
-    features: "Highlights",
-    tech: "Tech Stack",
-  };
 
   return (
     <div id="container--main" className="project-page">
@@ -35,42 +31,44 @@ export default async function Page({
       </Link>
 
       <div className="project-hero">
-        <h1>{p.title}</h1>
-        <p className="project-summary">{p.paragraphs[0]}</p>
+        <h1 dangerouslySetInnerHTML={{ __html: p.heading }} />
+        <p className="project-summary" dangerouslySetInnerHTML={{ __html: p.paragraphs[0] }} />
       </div>
 
       <div className="project-links">
         <a className="project-btn" href={p.links.liveDemoHref} target="_blank" rel="noreferrer">
-          {p.links.liveDemoLabel}
+          🌐 {p.links.liveDemoLabel}
         </a>
         <a className="project-btn" href={p.links.sourceCodeHref} target="_blank" rel="noreferrer">
-          {p.links.sourceCodeLabel}
+          💻 {p.links.sourceCodeLabel}
         </a>
       </div>
 
       <div className="project-details">
+        {/* Left Column (Tech Stack & Paragraphs) */}
         <div className="project-column">
-          <h3>{labels.features}</h3>
+          <h3>Tech Stack</h3>
+          <div id="wrapper--techstack__items">
+            {p.techStack.map((t) => (
+              <div key={t} className="card--techstack">
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+
+          {p.paragraphs.slice(1).map((para, i) => (
+            <p key={i} className="details-text" dangerouslySetInnerHTML={{ __html: para }} />
+          ))}
+        </div>
+
+        {/* Right Column (Key Features) */}
+        <div className="project-column">
+          <h3>Key Features</h3>
           <ul>
             {p.bullets.map((b) => (
               <li key={b}>{b}</li>
             ))}
           </ul>
-        </div>
-
-        <div className="project-column">
-          <h3>{labels.tech}</h3>
-          <ul>
-            {p.techStack.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-
-          <div className="details-text">
-            {p.paragraphs.slice(1).map((para) => (
-              <p key={para}>{para}</p>
-            ))}
-          </div>
         </div>
       </div>
     </div>
