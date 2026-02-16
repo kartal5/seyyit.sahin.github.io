@@ -47,10 +47,14 @@ export default async function Page({
       <div className="project-details">
         {/* Left Column (Tech Stack & Paragraphs) */}
         <div className="project-column">
-          <h3>Tech Stack</h3>
+          <h3>Tech Valg</h3>
           <div id="wrapper--techstack__items">
-            {p.techStack.map((t) => (
-              <div key={t} className="card--techstack">
+            {p.techStack.map((t, i) => (
+              <div 
+                key={t} 
+                className="card--techstack"
+                style={{ "--card-index": i } as React.CSSProperties}
+              >
                 <span>{t}</span>
               </div>
             ))}
@@ -63,7 +67,7 @@ export default async function Page({
 
         {/* Right Column (Key Features) */}
         <div className="project-column">
-          <h3>Key Features</h3>
+          <h3>Nøgle Features</h3>
           <ul>
             {p.bullets.map((b) => (
               <li key={b}>{b}</li>

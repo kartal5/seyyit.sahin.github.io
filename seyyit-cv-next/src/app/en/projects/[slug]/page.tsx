@@ -49,8 +49,12 @@ export default async function Page({
         <div className="project-column">
           <h3>Tech Stack</h3>
           <div id="wrapper--techstack__items">
-            {p.techStack.map((t) => (
-              <div key={t} className="card--techstack">
+            {p.techStack.map((t, i) => (
+              <div 
+                key={t} 
+                className="card--techstack"
+                style={{ "--card-index": i } as React.CSSProperties}
+              >
                 <span>{t}</span>
               </div>
             ))}
