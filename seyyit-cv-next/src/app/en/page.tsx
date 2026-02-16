@@ -8,6 +8,21 @@ import TechStack from "@/components/cv/TechStack";
 import WorkHistory from "@/components/cv/WorkHistory";
 import Education from "@/components/cv/Education";
 import ContactCTA from "@/components/cv/ContactCTA";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to my portfolio. I am a software developer passionate about building modern web applications.",
+  alternates: {
+    canonical: "/en/",
+    languages: {
+      "da": "/",
+      "en": "/en/",
+    },
+  },
+};
+
+// ... keep your default function Home() exactly the same
 
 export default function Page() {
   const c = cvContent.en;

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projectSlugs, type ProjectSlug } from "@/content/projects";
+import type { Metadata } from "next";
 
 export const dynamicParams = false;
 
@@ -10,6 +11,28 @@ function isProjectSlug(slug: string): slug is ProjectSlug {
 
 export function generateStaticParams() {
   return projectSlugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  if (!isProjectSlug(slug)) return {};
+  
+  const p = getProject("da", slug);
+  return {
+    title: p.title,
+    description: p.paragraphs[0].replace(/<[^>]*>?/gm, ''), // Strips HTML tags for the description
+    alternates: {
+      canonical: `/projects/${slug}/`,
+      languages: {
+        "da": `/projects/${slug}/`,
+        "en": `/en/projects/${slug}/`,
+      },
+    },
+  };
 }
 
 export default async function Page({

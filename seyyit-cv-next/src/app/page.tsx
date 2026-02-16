@@ -8,6 +8,19 @@ import TechStack from "@/components/cv/TechStack";
 import WorkHistory from "@/components/cv/WorkHistory";
 import Education from "@/components/cv/Education";
 import ContactCTA from "@/components/cv/ContactCTA";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Forside",
+  description: "Velkommen til min portefølje. Jeg er en softwareudvikler, der brænder for at bygge moderne webapplikationer.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "da": "/",
+      "en": "/en/",
+    },
+  },
+};
 
 export default function Page() {
   const c = cvContent.da;

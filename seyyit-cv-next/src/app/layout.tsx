@@ -6,8 +6,29 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Seyyit Sahin",
-  description: "Developer Portfolio",
+  metadataBase: new URL("https://www.seyyitsahin.com"),
+  title: {
+    template: "%s | Seyyit Sahin",
+    default: "Seyyit Sahin - Portfolio",
+  },
+  description: "Portfolio for Seyyit Sahin, an ambitious Web- and Software Developer.",
+  openGraph: {
+    title: "Seyyit Sahin - Web Developer",
+    description: "Portfolio for Seyyit Sahin, an ambitious Web- and Software Developer.",
+    url: "https://www.seyyitsahin.com",
+    siteName: "Seyyit Sahin Portfolio",
+    locale: "da_DK",
+    type: "website",
+    // will place an image at public/og-image.webp later
+    images: [
+      {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Seyyit Sahin Portfolio Preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
