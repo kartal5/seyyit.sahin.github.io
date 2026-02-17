@@ -21,7 +21,8 @@ function systemTheme(): Theme {
 }
 
 function getSnapshot(): Theme {
-  const t = document.body.getAttribute("data-theme");
+  // FIX: Read from the HTML tag, not the body
+  const t = document.documentElement.getAttribute("data-theme");
   return t === "dark" ? "dark" : "light";
 }
 
@@ -31,7 +32,8 @@ function subscribe(onStoreChange: () => void) {
 }
 
 function applyTheme(theme: Theme, persist: boolean) {
-  document.body.setAttribute("data-theme", theme);
+  // FIX: Apply to the HTML tag, not the body
+  document.documentElement.setAttribute("data-theme", theme);
   if (persist) localStorage.setItem(STORAGE_KEY, theme);
   window.dispatchEvent(new Event(THEME_EVENT));
 }
