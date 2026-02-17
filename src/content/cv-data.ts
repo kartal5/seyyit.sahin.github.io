@@ -112,7 +112,7 @@ export const cvContent: Record<Locale, CvContent> = {
       {
         "title": "🚧 FULLSTACK UDVIKLER | CELLA TEST (Praktik)",
         "period": "2024",
-        "description": "Udviklede komplette løsninger med fokus på integration af moderne frontend og backend-teknologier. Arbejdede med både performance og vedligeholdelse af eksisterende løsninger.",
+        "description": "Udviklede komplette løsninger med fokus på integration af moderne frontend og backend-teknologier.",
         "highlights": []
       },
       {
@@ -127,7 +127,7 @@ export const cvContent: Record<Locale, CvContent> = {
       {
         "title": "🚧 Frontend Udvikler | MobileCare.dk (Praktik)",
         "period": "2020",
-        "description": "Udviklede en responsiv frontend-løsning med fokus på brugervenlighed og kvalitet.",
+        "description": "Udviklede en responsiv frontend-løsning med fokus på brugervenlighed.",
         "highlights": [
           "Arbejdede tæt med UX-design og performance"
         ]
