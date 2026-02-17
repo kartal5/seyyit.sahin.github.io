@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap');
 
 :root{
     --mainBgColor-light: #F8F9FA;
@@ -26,7 +25,7 @@
 }
 
 *{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
     line-height: 1.6em;
     box-sizing: border-box;
     color: var(--mainTextColor);
@@ -37,9 +36,13 @@ html {
 }
 
 body{
-    background-color: var(--mainBgColor);
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
+  background-color: var(--mainBgColor);
+  margin: 0;
+  padding: 0;
+
+  /* ORIGINAL BEHAVIOR (from old project) */
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -48,7 +51,7 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-poppins), sans-serif;
     font-weight: 700;
 }
 
@@ -100,6 +103,7 @@ li{
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* Staggered animation */
 .visible.card--techstack {
@@ -158,23 +162,6 @@ li{
     color: var(--mainLinkColor);
     font-size: 0.9em;
 }
-
-
-#cv-download-btn {
-    background-color: var(--mainLinkColor);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#cv-download-btn:hover {
-    background-color: var(--mainTextColor);
-    color: var(--mainBgColor);
-    transform: translateY(-2px);
-}
-
 
 #qualifications--list{
     list-style: none;
@@ -521,3 +508,40 @@ li{
   box-shadow: 0 0 8px var(--mainLinkColor);
 }
 
+/* ─────────────────────────────────────
+   THEME SWITCHER
+───────────────────────────────────── */
+#theme-switcher {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--mainBorderColor);
+}
+
+.theme:hover {
+    transform: scale(1.15);
+}
+
+.theme.active {
+    box-shadow: 0 0 10px var(--mainLinkColor);
+    border-color: var(--mainLinkColor);
+}
+
+#theme-light {
+    background-color: #fff;
+}
+
+#theme-dark {
+    background-color: #121212;
+}
