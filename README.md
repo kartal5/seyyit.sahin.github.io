@@ -1,5 +1,4 @@
-````markdown
-# Seyyit Sahin | Web Developer Portfolio
+# Seyyit Sahin | Web Developer & Software Engineer Portfolio
 
 [![Live Site](https://img.shields.io/badge/Live_Site-www.seyyitsahin.com-success?style=for-the-badge)](https://www.seyyitsahin.com)
 [![Next.js](https://img.shields.io/badge/Next.js-Black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
