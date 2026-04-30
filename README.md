@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+````markdown
+# Seyyit Sahin | Web Developer Portfolio
 
-## Getting Started
+[![Live Site](https://img.shields.io/badge/Live_Site-www.seyyitsahin.com-success?style=for-the-badge)](https://www.seyyitsahin.com)
+[![Next.js](https://img.shields.io/badge/Next.js-Black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-First, run the development server:
+Welcome to the source code of my personal portfolio! This repository showcases my approach to building modern, highly optimized, and scalable web applications.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 The Architecture (Vanilla JS ➡️ Next.js)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project recently underwent a complete ground-up migration. It started as a traditional Vanilla HTML/CSS/JS website and was re-architected into an enterprise-grade **Next.js (App Router)** application. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+My primary goals for this migration were **maximum performance**, **scalability**, and **developer experience (DX)**. Rather than relying on heavy third-party libraries, I utilized Next.js native features to build a lightweight, statically generated (SSG) site.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Technical Highlights
 
-## Learn More
+* **Static Site Generation (SSG):** The entire application is pre-rendered at build time using `output: 'export'`. It serves pure and fast static HTML/CSS to the client with zero server-side rendering overhead.
+* **Zero-Dependency i18n:** Instead of bringing in heavy internationalization libraries, I implemented explicit, typed URL routing (`/` for Danish, `/en/` for English). This ensures perfect SEO crawler indexing and immediate load times.
+* **Decoupled Data Layer:** The UI components (`src/components/`) are completely decoupled from the data layer (`src/content/`). Adding a new project or updating my resume is done entirely via typed TypeScript objects, preventing UI regressions.
+* **Native CSS Variables & Theming:** To maintain complete control over the design system without the bloat of external CSS frameworks, I kept styling native. It features a custom light/dark mode implementation.
+* **Automated CI/CD Pipeline:** Deployments are handled automatically via GitHub Actions. Merging to the `master` branch triggers a secure build and deploy process directly to GitHub Pages with zero downtime.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Framework:** Next.js (App Router)
+* **Language:** TypeScript
+* **Styling:** Vanilla CSS & CSS Variables
+* **Hosting:** GitHub Pages
+* **CI/CD:** GitHub Actions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+```text
+src/
+├── app/              # Next.js App Router (Pages, Layouts, SEO Metadata)
+├── components/       # Reusable, locale-agnostic React components
+├── content/          # TypeScript dictionaries for CV data and Project details
+├── lib/              # Utility functions and optimized local font loading
+└── globals.css       # Core design system and responsive media queries
+````
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏃‍♂️ Running Locally
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you'd like to explore the code or run the project locally:
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/kartal5/seyyit.sahin.github.io.git](https://github.com/kartal5/seyyit.sahin.github.io.git)
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
+4.  Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) in your browser.
+
+-----
+
+### 📫 Let's Connect
+
+I am currently open to new opportunities\! Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/seyyit-sahin/) or contact me directly through my [website](https://www.google.com/url?sa=E&source=gmail&q=https://www.seyyitsahin.com).
